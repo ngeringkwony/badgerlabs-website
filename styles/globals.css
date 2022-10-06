@@ -1,3 +1,11 @@
+:root {
+  --badger-black: #2b2b2b;
+  --badger-orange: #f0bf44;
+  --badger-grey: #575655;
+  --body-font: "Montserrat", sans-serif;
+  --heading-font: "Ultra", serif;
+}
+
 html,
 body {
   padding: 0;
@@ -13,6 +21,124 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+p {
+  font-family: var(--body-font);
+}
+.section {
+  width: 100vw;
+  height: 90vh;
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.hero > *,
+.features-section > * {
+  height: 100%;
+  width: 50%;
+}
+
+.hero-content {
+  /* width: 60%; */
+  /* padding: 2em; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content > * {margin-left: 40px;}
+
+.hero-heading {
+  font-size: 80px;
+  color: var(--badger-black);
+}
+
+.hero-heading > span {
+  color: var(--badger-orange);
+}
+
+.hero-banner {
+  /* width: 40%; */
+  background-image: url("../public/hero-placeholder.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  background-position: left top;
+}
+
+.aside-content {
+  background-color: #000;
+  color: white;
+  border-top-left-radius: 80px;
+  height: 160px;
+  padding: 2em 140px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* end hero section */
+
+.features-section {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.feature-name {
+  font-size: 60px;
+}
+
+.feature-name > span {color: var(--badger-orange)}
+
+.aside-light,
+.aside-dark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: rgb(247, 247, 247);
+}
+
+.features-heading {
+  font-size: 72px;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+.aside-dark {
+  background-color: rgba(240, 203, 145, 0.4);
+}
+
+p.feature-description,
+p.feature-subheading {
+  width: 100%;
+  text-align: left;
+}
+p.feature-subheading {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+p.feature-description {
+  font-weight: bold;
+  font-size: 36px;
 }
 
 @media (prefers-color-scheme: dark) {
